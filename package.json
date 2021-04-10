@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --mode development"
+    "dev": "webpack serve --node-env=development",
+    "prebuild": "rimraf dist",
+    "build": "cross-env NODE_ENV=production webpack"
   },
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -22,12 +24,17 @@
     "@babel/preset-react": "^7.13.13",
     "@hot-loader/react-dom": "^17.0.1",
     "babel-loader": "^8.2.2",
+    "chalk": "^4.1.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.2.1",
     "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.4.1",
     "react-hot-loader": "^4.13.0",
+    "rimraf": "^3.0.2",
     "style-loader": "^2.0.0",
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   }
 }
