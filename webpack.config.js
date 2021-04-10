@@ -7,7 +7,13 @@ module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
-    filename: "bundle.[hash].js",
+    filename: "[name].[hash].js",
+    publicPath: "/",
+  },
+  resolve: {
+    alias: {
+      "react-dom": "@hot-loader/react-dom",
+    },
   },
   devtool: "inline-source-map",
   module: {
@@ -36,6 +42,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: "public/index.html",
       favicon: "public/favicon.ico",
@@ -46,5 +53,6 @@ module.exports = {
     port: port,
     historyApiFallback: true,
     open: true,
+    hot: true,
   },
 };
