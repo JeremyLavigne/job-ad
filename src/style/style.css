@@ -1,0 +1,45 @@
+header {
+  background-color: #131921;
+  height: 60px;
+  padding: 5px;
+  color: white;
+}
+
+header h2 {
+  font-size: 11;
+}
+
+.description-section {
+  width: 35%;
+  min-width: 200px;
+  height: 300px;
+  background-color: green;
+}
+
+.images-section {
+  width: 40%;
+  min-width: 200px;
+  height: 300px;
+  background-color: blue;
+}
+
+.shop-section {
+  width: 20%;
+  min-width: 100px;
+  height: 300px;
+  background-color: yellow;
+}
+
+.home-page {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

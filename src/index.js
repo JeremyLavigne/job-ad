@@ -1,9 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
-import { hot } from "react-hot-loader/root";
 
-const render = (Component) =>
-  ReactDOM.render(<Component />, document.getElementById("root"));
+import "./style/style.css";
 
-render(hot(App));
+ReactDOM.render(<App />, document.getElementById("root"));
