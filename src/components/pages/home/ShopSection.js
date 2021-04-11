@@ -2,9 +2,9 @@ import React from "react";
 
 const ShopSection = () => {
   return (
-    <div className="shop-section">
+    <article className="shop-section">
       <div>Buy it</div>
-    </div>
+    </article>
   );
 };
 

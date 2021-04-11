@@ -2,9 +2,9 @@ import React from "react";
 
 const ImageSection = () => {
   return (
-    <div className="images-section">
+    <article className="images-section">
       <div>Here some images</div>
-    </div>
+    </article>
   );
 };
 
