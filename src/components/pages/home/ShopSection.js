@@ -1,17 +1,28 @@
 import React from "react";
 import { ImLocation2 } from "react-icons/im";
+import { MdShoppingCart } from "react-icons/md";
+import { BsPlayFill } from "react-icons/bs";
 
-const Button = ({ content }) => {
-  return <button className="shop-btn">{content}</button>;
+const Button = ({ content, onClick }) => {
+  return (
+    <button className="shop-btn" onClick={onClick}>
+      {content === "Add to Cart" ? (
+        <MdShoppingCart className="shop-btn-icon" />
+      ) : content === "Hire Now" ? (
+        <BsPlayFill className="shop-btn-icon" />
+      ) : null}
+      <span className="shop-btn-content">{content}</span>
+    </button>
+  );
 };
 
-const ShopSection = () => {
+const ShopSection = ({ setCartNumber, cartNumber }) => {
   return (
     <article className="shop-section">
       <div className="shop-section-top">
         <div>
-          <span className="description-price">29999 kr/mth</span>
-          <span className="shop-fees">No shipping fees.</span>
+          <span className="description-price shop-price">29.999 kr/mth</span>
+          <span className="shop-fees">No shipping fees</span>
         </div>
 
         <div>
@@ -22,13 +33,22 @@ const ShopSection = () => {
       </div>
 
       <div className="shop-buttons-container">
-        <Button content="Add to Cart" />
+        {cartNumber === 0 ? (
+          <Button content="Add to Cart" onClick={() => setCartNumber(1)} />
+        ) : (
+          <Button content="Remove" onClick={() => setCartNumber(0)} />
+        )}
         <Button content="Hire Now" />
       </div>
 
       <div className="header-delivery-container">
-        <ImLocation2 className="header-delivery-icon" />
-        <span className="header-delivery-stockholm">Deliver to Stockholm</span>
+        <div>
+          <ImLocation2 className="header-delivery-icon" />
+        </div>
+        <div>
+          <div>Deliver to</div>
+          <div className="header-delivery-stockholm">Stockholm</div>
+        </div>
       </div>
     </article>
   );

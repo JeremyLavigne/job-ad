@@ -17,12 +17,17 @@
   @media screen and ( max-width: 520px )
     width: 60%
 
+.shop-price
+  margin-left: 0px
+
 .shop-section-top div
   margin: 10px 0px
 
 .shop-arrives
   font-weight: bold
   color: black
+  font-style: italic
+  margin-left: 5px
 
 .shop-stock
   color: $info
@@ -40,8 +45,18 @@
   border: 1px solid black
   border-radius: 2px
   padding: 7px
-  font-size: 18px
+  font-size: 16px
   cursor: pointer
+  display: flex
+  justify-content: flex-start
+  align-items: center
+
+  &-icon
+    font-size: 22px
+
+  &-content
+    text-align: center
+    flex-grow: 1
 
   &:hover
     background-color: $interaction2

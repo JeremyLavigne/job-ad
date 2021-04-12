@@ -43,12 +43,16 @@ header {
   height: 30px;
   width: 92%;
   border: none;
+  padding-left: 10px;
   border-radius: 5px 0px 0px 5px;
 }
 @media screen and (max-width: 920px) {
   .header-searchbar-input {
     width: 82%;
   }
+}
+.header-searchbar-input:focus {
+  outline: none;
 }
 .header-searchbar-icon-container {
   background-color: #f0a74c;
@@ -58,11 +62,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 @media screen and (max-width: 720px) {
   .header-searchbar-icon-container {
     width: 18%;
   }
+}
+.header-searchbar-icon-container:hover {
+  background-color: #f3cd71;
 }
 .header-searchbar-icon {
   font-size: 22px;
@@ -71,10 +79,14 @@ header {
 .header-cart-container {
   position: relative;
   width: 40px;
-  height: 40px;
+  height: 50px;
+  cursor: pointer;
+}
+.header-cart-container:hover {
+  color: #f3cd71;
 }
 .header-cart-icon {
-  font-size: 26px;
+  font-size: 36px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -133,6 +145,7 @@ header {
 
 .description-rating-stars {
   color: #f3cd71;
+  font-size: 18px;
 }
 .description-rating-label {
   color: #0a5c49;
@@ -162,8 +175,28 @@ header {
   margin: 5px;
   cursor: pointer;
 }
+.description-choice:hover {
+  border: 1px solid black;
+}
 .description-choice--active {
   border: 2px solid #f0a74c;
+}
+.description-choice--active:hover {
+  border: 2px solid #f0a74c;
+}
+.description-choice--disabled {
+  border: 1px dashed #ddd;
+  cursor: auto;
+}
+.description-choice--disabled:hover {
+  border: 1px dashed #ddd;
+}
+
+.description-about li {
+  list-style: none;
+  font-style: italic;
+  font-size: 20px;
+  margin: 5px 0px;
 }
 
 .images-section {
@@ -220,6 +253,10 @@ header {
   }
 }
 
+.shop-price {
+  margin-left: 0px;
+}
+
 .shop-section-top div {
   margin: 10px 0px;
 }
@@ -227,6 +264,8 @@ header {
 .shop-arrives {
   font-weight: bold;
   color: black;
+  font-style: italic;
+  margin-left: 5px;
 }
 
 .shop-stock {
@@ -247,8 +286,18 @@ header {
   border: 1px solid black;
   border-radius: 2px;
   padding: 7px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.shop-btn-icon {
+  font-size: 22px;
+}
+.shop-btn-content {
+  text-align: center;
+  flex-grow: 1;
 }
 .shop-btn:hover {
   background-color: #f0a74c;

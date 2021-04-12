@@ -41,10 +41,14 @@ header
     height: 30px
     width: 92%
     border: none
+    padding-left: 10px
     border-radius: 5px 0px 0px 5px
 
     @media screen and ( max-width: 920px )
       width: 82%    
+
+    &:focus
+      outline: none
 
   &-icon-container
     background-color: $interaction2
@@ -54,9 +58,13 @@ header
     display: flex
     justify-content: center
     align-items: center
+    cursor: pointer
 
     @media screen and ( max-width: 720px )
-      width: 18%    
+      width: 18%
+
+    &:hover
+      background-color: $interaction1
 
   &-icon
     font-size: 22px
@@ -65,10 +73,14 @@ header
   &-container
     position: relative
     width: 40px
-    height: 40px
+    height: 50px
+    cursor: pointer
+
+    &:hover
+      color: $interaction1
     
   &-icon
-    font-size: 26px
+    font-size: 36px
     position: absolute
     bottom: 0
     left: 0

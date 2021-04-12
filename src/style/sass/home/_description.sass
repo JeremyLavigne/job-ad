@@ -32,6 +32,8 @@
 .description-rating
   &-stars
     color: $interaction1
+    font-size: 18px
+
   &-label
     color: $info
     margin-left: 5px
@@ -56,5 +58,24 @@
   margin: 5px
   cursor: pointer
 
+  &:hover
+    border: 1px solid black
+
   &--active
     border: 2px solid $interaction2
+
+    &:hover
+      border: 2px solid $interaction2
+
+  &--disabled
+    border: 1px dashed $lines
+    cursor: auto
+
+    &:hover
+      border: 1px dashed $lines
+
+.description-about li
+  list-style: none
+  font-style: italic
+  font-size: 20px
+  margin: 5px 0px

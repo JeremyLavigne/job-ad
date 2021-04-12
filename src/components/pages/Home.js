@@ -6,14 +6,14 @@ import Description from "./home/Description";
 import ShopSection from "./home/ShopSection";
 import AlsoViewed from "./home/AlsoViewed";
 
-const Home = () => {
+const Home = ({ setCartNumber, cartNumber }) => {
   return (
     <main className="home-page">
       <section className="home-page-top">
         <ImageSection />
         <div className="home-page-top-right">
           <Description />
-          <ShopSection />
+          <ShopSection setCartNumber={setCartNumber} cartNumber={cartNumber} />
         </div>
       </section>
 
