@@ -71,6 +71,36 @@ header {
   }
 }
 
+.also-viewed-images {
+  display: flex;
+}
+@media screen and (max-width: 520px) {
+  .also-viewed-images {
+    flex-wrap: wrap;
+  }
+}
+
+.figures-viewed {
+  margin: 15px;
+  padding: 0;
+  width: 20%;
+}
+@media screen and (max-width: 920px) {
+  .figures-viewed {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .figures-viewed {
+    width: 60%;
+    margin: 15px auto;
+  }
+}
+
+.figures-viewed img {
+  width: 80%;
+}
+
 .home-page {
   padding: 10px;
 }

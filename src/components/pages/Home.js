@@ -5,8 +5,6 @@ import ImageSection from "./home/ImageSection";
 import Description from "./home/Description";
 import ShopSection from "./home/ShopSection";
 import AlsoViewed from "./home/AlsoViewed";
-import QuestionAnswer from "./home/QuestionAnswer";
-import Review from "./home/Review";
 
 const Home = () => {
   return (
@@ -21,8 +19,6 @@ const Home = () => {
 
       <section className="home-page-bottom">
         <AlsoViewed />
-        <QuestionAnswer />
-        <Review />
       </section>
     </main>
   );
