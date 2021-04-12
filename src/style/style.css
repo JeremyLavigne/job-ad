@@ -7,12 +7,92 @@ header {
   padding: 5px;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
+.header-delivery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  text-align: center;
+}
 .header-delivery-icon {
-  font-size: 44px;
+  font-size: 24px;
+  margin-right: 5px;
+}
+.header-delivery-stockholm {
+  font-weight: bold;
+}
+
+.header-middle {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.header-searchbar-container {
+  border-radius: 5px;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  margin-right: 10px;
+}
+.header-searchbar-input {
+  height: 30px;
+  width: 92%;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+}
+@media screen and (max-width: 920px) {
+  .header-searchbar-input {
+    width: 82%;
+  }
+}
+.header-searchbar-icon-container {
+  background-color: #f0a74c;
+  height: 32px;
+  width: 8%;
+  border-radius: 0px 5px 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 720px) {
+  .header-searchbar-icon-container {
+    width: 18%;
+  }
+}
+.header-searchbar-icon {
+  font-size: 22px;
+}
+
+.header-cart-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.header-cart-icon {
+  font-size: 26px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+.header-cart-number {
+  position: absolute;
+  color: #f0a74c;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .description-section {
@@ -89,7 +169,6 @@ header {
 .images-section {
   width: 47%;
   max-width: 700px;
-  background-color: blue;
   display: flex;
 }
 @media screen and (max-width: 920px) {
