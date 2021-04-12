@@ -13,21 +13,62 @@ header {
 }
 
 .description-section {
-  width: 35%;
-  min-width: 200px;
+  width: 55%;
+  padding: 10px;
   background-color: green;
+}
+@media screen and (max-width: 520px) {
+  .description-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .images-section {
-  width: 40%;
-  min-width: 200px;
+  width: 47%;
+  max-width: 700px;
   background-color: blue;
+  display: flex;
+}
+@media screen and (max-width: 920px) {
+  .images-section {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .images-section {
+    width: 100%;
+  }
+}
+
+.images-section figure {
+  margin: 10px;
+  padding: 0px;
+}
+
+.images-miniatures {
+  width: 15%;
+}
+
+.images-section img {
+  width: 100%;
+}
+
+.figure-main {
+  width: 80%;
 }
 
 .shop-section {
-  width: 20%;
-  min-width: 100px;
+  width: 35%;
+  max-width: 250px;
+  padding: 10px;
   background-color: yellow;
+}
+@media screen and (max-width: 520px) {
+  .shop-section {
+    width: 60%;
+  }
 }
 
 .home-page {
@@ -41,6 +82,17 @@ header {
   margin: 20px auto;
   padding-bottom: 20px;
   border-bottom: 1px solid #ddd;
+}
+.home-page-top-right {
+  width: 47%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 920px) {
+  .home-page-top-right {
+    width: 100%;
+  }
 }
 
 body {

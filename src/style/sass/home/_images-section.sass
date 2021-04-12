@@ -1,4 +1,25 @@
 .images-section
-  width: 40%
-  min-width: 200px
+  width: 47%
+  max-width: 700px
   background-color: blue
+  display: flex
+
+  @media screen and ( max-width: 920px )
+    width: 80%
+    margin-bottom: 20px
+  
+  @media screen and ( max-width: 720px )
+    width: 100%
+
+.images-section figure
+  margin: 10px
+  padding: 0px
+
+.images-miniatures
+  width: 15%
+
+.images-section img
+  width: 100%
+
+.figure-main
+  width: 80%
