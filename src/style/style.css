@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 header {
   background-color: #131921;
   height: 60px;
@@ -292,6 +293,12 @@ header {
   justify-content: flex-start;
   align-items: center;
 }
+.shop-btn-link {
+  text-decoration: none;
+}
+.shop-btn-link:visited {
+  color: inherit;
+}
 .shop-btn-icon {
   font-size: 22px;
 }
@@ -355,6 +362,76 @@ header {
   .home-page-top-right {
     width: 100%;
   }
+}
+
+.no-match-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hire-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 60%;
+}
+@media screen and (max-width: 920px) {
+  .hire-page {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .hire-page {
+    width: 95%;
+  }
+}
+
+.hire-page h2 {
+  width: 100%;
+}
+
+.hire-recap {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 25px 0px;
+  padding: 20px 0px;
+}
+
+.hire-recap h3 {
+  margin: 0px 0px 10px 0px;
+  font-size: 22px;
+}
+
+.hire-details {
+  font-style: italic;
+  margin-left: 30px;
+}
+
+.hire-contact {
+  text-align: center;
+}
+.hire-contact-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hire-linkedIn-icon {
+  font-size: 44px;
+  color: #0077b5;
+  cursor: pointer;
+}
+.hire-linkedIn-icon:hover {
+  color: black;
+}
+
+.hire-mail {
+  font-style: italic;
 }
 
 body {

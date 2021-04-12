@@ -6,13 +6,27 @@ import Description from "./home/Description";
 import ShopSection from "./home/ShopSection";
 import AlsoViewed from "./home/AlsoViewed";
 
-const Home = ({ setCartNumber, cartNumber }) => {
+const Home = (props) => {
+  const {
+    cartNumber,
+    setCartNumber,
+    activePosition,
+    activeWorktime,
+    setActivePosition,
+    setActiveWorktime,
+  } = props;
+
   return (
     <main className="home-page">
       <section className="home-page-top">
         <ImageSection />
         <div className="home-page-top-right">
-          <Description />
+          <Description
+            activePosition={activePosition}
+            setActivePosition={setActivePosition}
+            activeWorktime={activeWorktime}
+            setActiveWorktime={setActiveWorktime}
+          />
           <ShopSection setCartNumber={setCartNumber} cartNumber={cartNumber} />
         </div>
       </section>

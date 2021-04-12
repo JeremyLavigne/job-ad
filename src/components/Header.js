@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ImLocation2 } from "react-icons/im";
 import { MdShoppingCart } from "react-icons/md";
 import { BiSearchAlt } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Header = ({ cartNumber }) => {
   const [inputText, setInputText] = useState("");
@@ -40,10 +41,12 @@ const Header = ({ cartNumber }) => {
         <img src="https://www.countryflags.io/se/flat/32.png" />
       </div>
 
-      <div className="header-cart-container">
-        <MdShoppingCart className="header-cart-icon" />
-        <div className="header-cart-number">{cartNumber}</div>
-      </div>
+      <Link to="/hire" className="shop-btn-link">
+        <div className="header-cart-container">
+          <MdShoppingCart className="header-cart-icon" />
+          <div className="header-cart-number">{cartNumber}</div>
+        </div>
+      </Link>
     </header>
   );
 };

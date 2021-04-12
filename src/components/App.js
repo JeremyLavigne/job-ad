@@ -1,31 +1,41 @@
 import React, { useState } from "react";
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
-import importedComponent from "react-imported-component";
 
 // Components
 import Header from "./Header";
-import Loading from "./Loading";
+import HirePage from "./pages/HirePage";
+import NoMatch from "./NoMatch";
 import Home from "./pages/Home";
-
-const AsyncHirePage = importedComponent(() => import("./pages/HirePage"), {
-  LoadingComponent: Loading,
-});
-
-const AsyncNoMatch = importedComponent(() => import("./NoMatch"), {
-  LoadingComponent: Loading,
-});
 
 const App = () => {
   const [cartNumber, setCartNumber] = useState(0);
+  const [activePosition, setActivePosition] = useState("Fullstack");
+  const [activeWorktime, setActiveWorktime] = useState("Full Time");
+
   return (
     <Router>
       <Header cartNumber={cartNumber} />
       <Switch>
         <Route exact path="/">
-          <Home setCartNumber={setCartNumber} cartNumber={cartNumber} />
+          <Home
+            cartNumber={cartNumber}
+            setCartNumber={setCartNumber}
+            activePosition={activePosition}
+            setActivePosition={setActivePosition}
+            activeWorktime={activeWorktime}
+            setActiveWorktime={setActiveWorktime}
+          />
         </Route>
-        <Route exact path="/hire" component={AsyncHirePage} />
-        <Route component={AsyncNoMatch} />
+
+        <Route exact path="/hire">
+          <HirePage
+            activePosition={activePosition}
+            activeWorktime={activeWorktime}
+            cartNumber={cartNumber}
+          />
+        </Route>
+
+        <Route component={NoMatch} />
       </Switch>
     </Router>
   );

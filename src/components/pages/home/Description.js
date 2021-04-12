@@ -14,9 +14,13 @@ const Choice = ({ content, isActive, isDisabled, onClick }) => {
   );
 };
 
-const Description = () => {
-  const [activePosition, setActivePosition] = useState("Fullstack");
-  const [activeWorktime, setActiveWorktime] = useState("Full Time");
+const Description = (props) => {
+  const {
+    activePosition,
+    activeWorktime,
+    setActivePosition,
+    setActiveWorktime,
+  } = props;
 
   return (
     <article className="description-section">

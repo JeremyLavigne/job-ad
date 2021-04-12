@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NoMatch = () => {
   return (
-    <div>
-      <h2>Oups, no match</h2>
-      <button>Go back in home page</button>
+    <div className="no-match-page">
+      <h2>This page doesn't exist</h2>
+      <Link to="/">
+        <button>Go back</button>
+      </Link>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { ImLocation2 } from "react-icons/im";
 import { MdShoppingCart } from "react-icons/md";
 import { BsPlayFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Button = ({ content, onClick }) => {
   return (
@@ -38,7 +39,9 @@ const ShopSection = ({ setCartNumber, cartNumber }) => {
         ) : (
           <Button content="Remove" onClick={() => setCartNumber(0)} />
         )}
-        <Button content="Hire Now" />
+        <Link to="/hire" className="shop-btn-link">
+          <Button content="Hire Now" onClick={() => setCartNumber(1)} />
+        </Link>
       </div>
 
       <div className="header-delivery-container">
