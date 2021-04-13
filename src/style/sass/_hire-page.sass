@@ -16,6 +16,11 @@
 .hire-page h2
   width: 100%
 
+.hire-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+
 .hire-recap
   display: flex
   justify-content: space-between
@@ -23,6 +28,9 @@
   border-bottom: 1px solid $lines
   margin: 25px 0px
   padding: 20px 0px
+
+  &-left
+    display: flex
 
 .hire-recap h3
   margin: 0px 0px 10px 0px
@@ -46,7 +54,26 @@
   cursor: pointer
 
   &:hover
+    color: $interaction2
+
+.back-button
+  outline: none
+  background-color: $danger
+  color: white
+  cursor: pointer
+  padding: 5px 8px
+  border: 1px solid $lines
+  border-radius: 3px
+
+  &:hover
+    background-color: $interaction2
     color: black
 
-.hire-mail
-  font-style: italic  
+.dev-logo
+  width: 50px
+  height: 50px
+  margin-right: 15px
+
+.hire-mail-link
+  font-style: italic
+  font-weight: bold
