@@ -27,6 +27,7 @@ const Cube = ({ dimensions, containerRef }) => {
     width: dimensions.width * 0.8,
     height: dimensions.width * 0.8,
     display: "flex",
+    justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#f0a74c",
     opacity: 0.85,
@@ -35,6 +36,11 @@ const Cube = ({ dimensions, containerRef }) => {
   const imgStyle = {
     maxHeight: "100%",
     maxWidth: "100%",
+  };
+
+  const imgDevStyle = {
+    maxHeight: "80%",
+    maxWidth: "80%",
   };
 
   const figure1Style = {
@@ -90,7 +96,7 @@ const Cube = ({ dimensions, containerRef }) => {
             <img alt="face2" src={image2} style={imgStyle} />
           </figure>
           <figure style={figure3Style}>
-            <img alt="face3" src={image6} style={imgStyle} />
+            <img alt="face3" src={image6} style={imgDevStyle} />
           </figure>
           <figure style={figure4Style}>
             <img alt="face4" src={image4} style={imgStyle} />

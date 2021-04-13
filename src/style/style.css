@@ -471,6 +471,11 @@ header {
 
 .hire-contact {
   text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  background-color: #efefef;
+  padding: 30px 0px;
+  margin-top: 30px;
 }
 .hire-contact-links {
   display: flex;
@@ -492,9 +497,10 @@ header {
   background-color: #b12704;
   color: white;
   cursor: pointer;
-  padding: 5px 8px;
+  padding: 6px 15px;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius: 4px;
+  font-size: 20px;
 }
 .back-button:hover {
   background-color: #f0a74c;

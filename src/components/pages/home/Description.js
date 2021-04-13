@@ -1,4 +1,5 @@
 import React from "react";
+import ReactTooltip from "react-tooltip";
 
 const Choice = ({ content, isActive, isDisabled, onClick }) => {
   return (
@@ -6,9 +7,10 @@ const Choice = ({ content, isActive, isDisabled, onClick }) => {
       className={`description-choice ${
         isActive && "description-choice--active"
       } ${isDisabled && "description-choice--disabled"}`}
-      title={isDisabled && "Available in 3 years..."}
+      data-tip={isDisabled && "Available in 3 years..."}
       onClick={onClick}
     >
+      <ReactTooltip />
       {content}
     </div>
   );
