@@ -8,11 +8,11 @@ const config = {
   output: {
     filename: "[name].[hash].js",
   },
-  resolve: {
-    alias: {
-      "react-dom": "@hot-loader/react-dom",
-    },
-  },
+  // resolve: {
+  //   alias: {
+  //     "react-dom": "@hot-loader/react-dom",
+  //   },
+  // },
   devtool: "inline-source-map",
   module: {
     rules: [

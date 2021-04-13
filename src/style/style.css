@@ -358,6 +358,36 @@ header {
   font-weight: 500;
 }
 
+.cube-main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cube-container {
+  filter: blur(1px);
+  position: relative;
+  transition: perspective 300ms ease;
+}
+
+.cube {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 300ms ease;
+}
+.cube.animated {
+  transition-duration: 100ms;
+}
+.cube figure {
+  position: absolute;
+  margin: 0;
+  background: #fff;
+  display: block;
+  transition: opacity 300ms;
+}
+
 .home-page {
   padding: 10px;
 }
