@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 
 const App = () => {
   const [cartNumber, setCartNumber] = useState(0);
-  const [activePosition, setActivePosition] = useState("Fullstack");
+  const [activePosition, setActivePosition] = useState("Frontend");
   const [activeWorktime, setActiveWorktime] = useState("Full Time");
 
   return (

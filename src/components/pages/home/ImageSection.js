@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import useResize from "../../../utils/useResize";
+import ReactImageZoom from "react-image-zoom";
 
 import image1 from "../../../assets/Group1.png";
 import image2 from "../../../assets/Group2.png";
-// import image3 from "https://versions.bulma.io/0.6.1/images/placeholders/128x128.png";
 
 const ImageMini = ({ src, onClick, isActive }) => {
   return (
@@ -16,13 +17,22 @@ const ImageMini = ({ src, onClick, isActive }) => {
   );
 };
 
-const ImageSection = () => {
+const ImageSection = ({ activePosition }) => {
   const [activeImage, setActiveImage] = useState(image1);
+  const containerRef = useRef();
+  const containerDimensions = useResize(containerRef);
+
+  useEffect(() => {
+    if (activePosition === "Frontend") {
+      setActiveImage(image1);
+    } else {
+      setActiveImage(image2);
+    }
+  }, [activePosition]);
 
   return (
     <article className="images-section">
       <div className="images-miniatures">
-        {/* <ImageMini src={image3} onClick={() => setActiveImage(image3)} /> */}
         <ImageMini
           src={image1}
           onClick={() => setActiveImage(image1)}
@@ -34,8 +44,13 @@ const ImageSection = () => {
           isActive={activeImage === image2}
         />
       </div>
-      <figure className="figure-main">
-        <img src={activeImage} alt="main" />
+      <figure className="figure-main" ref={containerRef}>
+        <ReactImageZoom
+          width={containerDimensions.width}
+          height={containerDimensions.width}
+          img={activeImage}
+          zoomPosition="original"
+        />
       </figure>
     </article>
   );

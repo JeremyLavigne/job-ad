@@ -19,7 +19,7 @@ const Home = (props) => {
   return (
     <main className="home-page">
       <section className="home-page-top">
-        <ImageSection />
+        <ImageSection activePosition={activePosition} />
         <div className="home-page-top-right">
           <Description
             activePosition={activePosition}
