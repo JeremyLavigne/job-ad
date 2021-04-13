@@ -21,16 +21,15 @@ const config = {
           },
           {
             loader: "css-loader",
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localsConvention: "camelCase",
-              sourceMap: true,
-            },
+            // options: {
+            //   modules: true,
+            //   importLoaders: 1,
+            //   sourceMap: true,
+            // },
           },
-          {
-            loader: "postcss-loader",
-          },
+          // {
+          //   loader: "postcss-loader",
+          // },
         ],
       },
     ],
