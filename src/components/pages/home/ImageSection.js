@@ -4,6 +4,8 @@ import ReactImageZoom from "react-image-zoom";
 
 import image1 from "../../../assets/Group1.png";
 import image2 from "../../../assets/Group2.png";
+import minicube from "../../../assets/minicube.png";
+
 import Cube from "./Cube";
 
 const ImageMini = ({ src, onClick, isActive }) => {
@@ -36,7 +38,7 @@ const ImageSection = ({ activePosition }) => {
   return (
     <article className="images-section">
       <div className="images-miniatures">
-        <ImageMini onClick={() => setCubeIsActive(true)} />
+        <ImageMini src={minicube} onClick={() => setCubeIsActive(true)} />
         <ImageMini
           src={image1}
           onClick={() => {
